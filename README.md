@@ -1,7 +1,7 @@
 # 課題１ - PHP⑤-
 
 ## ①課題の内容（どんな作品）
-- MVPのMVCの部品を引き続き作成。　今週は、MVPのアーキテクチャーの土台を作り、PHP/LaravelからMySQL及びMongoDBにCRUD出来るようにした。
+- MVPの部品を引き続き作成。　今週は、MVPのアーキテクチャーの土台を作り、PHP/LaravelからMySQL及びMongoDBにCRUD出来るようにした。
     - サーバーサイドのフロントエンド（PHP/Laravel）とバックエンド（Python/Flask)を別のサーバー（PC)に設置し、Localhostの代わりIPで外部接続連携するようにした。
     -   ![image](https://github.com/seimei-san/wip_dev_04/assets/53326909/b1771891-89c2-40e8-a620-2ae4238a9e55)
 - 各サーバー上の機能がAPIで連携する際のデータを守るために、一部のREST API通信をTLSで暗号化する機能を実装した。
