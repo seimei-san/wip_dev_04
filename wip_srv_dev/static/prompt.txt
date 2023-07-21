@@ -1,0 +1,1 @@
+'Please identify these elements such as "who to do", "by when", "untile when", "what to do", "at where", "in where", "to where", "how to do", "how much", "how many" and "why" from the following Japanese text. If an element cannot be identifed, state NONE: "{黒澤さん、明日の会議の資料を今日の夕方までに作成できますか}"'

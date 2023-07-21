@@ -1,0 +1,78 @@
+<x-app-layout>
+    <x-slot name='header'>
+    <x-wip-header-menu></x-wip-header-menu>
+    </x-slot>
+    <x-errors id="errors" class='bg-blue-500 roundted-lg'>{{ $errors }}</x-errors>
+
+    <!-- ####### ALL_AREA::START ########-->
+    <div class="flex bg-gray-100">
+        <!-- ######## LEFT_AREA::START ########## -->
+        <div class="text-indigo-800 text-left px-4 py-4 mg-2">
+            <div class="bg-indigo-50 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-indigo-50 border-b border-lime-800 font-bold">
+                    ユーザーグループ (更新)
+                </div>
+            </div>
+            <!-- ++++ GROUP_FORM::START -->
+            <form action="{{ url('user_group/update') }}" method="POST" class="w-full max-w-lg">
+                @csrf
+                <div class="flex flex-col px-2 py-2">
+                    <!-- +++ COL::user_id +++ -->
+                    <div class="w-full md:w-1/1 px-3 py2">
+                        <label class="block uppercase tracking-wide text-blue-900 text-xs font-bold mb-2">
+                            ユーザーID
+                        </label>
+                        <div class="form-group">
+                            <select name="user_id" id="user-id" class="form-control">
+                                <option value="{{$wip_user_groups->user_id}}">{{$wip_user_groups->user_id}}</option>
+                                @foreach($wip_users as $wip_user)
+                                    <option value="{{$wip_user->user_id}}">{{ $wip_user->name . "(" . $wip_user->user_id . ")" }}</option>
+                                @endforeach
+                            </select>
+                        </div>    
+                        <!-- <input name="user_id" value="{{$wip_user_groups->user_id}}" class="appearance-none block w-full text-blue-900 border border-gray-600 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder=""> -->
+                    </div>
+                    <!-- +++ COL::group_id+++ -->
+                    <div class="w-full md:w-1/1 px-3 py-2">
+                        <label class="block uppercase tracking-wide text-blue-900 text-xs font-bold mb-2">
+                            グループID
+                        </label>
+                        <div class="form-group">
+                            <select name="group_id" id="group-id" class="form-control">
+                                <option value="{{$wip_user_groups->group_id}}">{{$wip_user_groups->group_id}}</option>
+                                @foreach($wip_groups as $wip_group)
+                                    <option value="{{$wip_group->group_id}}">{{ $wip_group->group_display_name . "(" . $wip_group->group_id . ")" }}</option>
+                                @endforeach
+                            </select>
+                        </div> 
+                        <!-- <input name="group_id" value="{{$wip_user_groups->group_id}}" class="appearance-none block w-full text-blue-900 border border-gray-600 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder=""> -->
+                    </div>
+                </div> 
+                <!-- +++ COL::BUTTON +++ -->
+                <div class="flex flex-col">
+                    <div class="text-gray-900 text-center px-4 py-2 m-2">
+                        <x-button class="bg-gray-900 rounded-lg">更新</x-button>
+                    </div>
+                </div>
+                <input type="hidden" name="user_group_id" value="{{$wip_user_groups->user_group_id}}">
+            </form>
+            <!-- ++++ GROUP_FORM::EMD -->
+        </div>
+        <!-- ######## LEFT_AREA::END ########## -->
+        <!-- ######## RIGHT_AREA::START ########## -->
+
+        <div class="flex-1 text-gray-700 text-left bg-gray-100 px-1 py-1 m-1">
+
+        </div>
+        <!-- ######## RIGHT_AREA::END ########## -->
+
+    </div>
+    <!-- ####### ALL_AREA::END ########-->
+
+
+
+
+
+
+
+</x-app-layout>

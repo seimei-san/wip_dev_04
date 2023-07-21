@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+
+ 
+:root {
+    /* 色 */
+  /* primary */
+  --primary-400: #aadaff;
+  --primary-500: #4394b4;
+  /* grey */
+  --grey-0: #fafbfc;
+  --grey-50: #f2f4f8;
+  --grey-300: #dbe0ea;
+  --grey-1000: #333538;
+
+  --blue-base: #addeff;
+  --blue-text: #002c6e;
+
+  --white-text: #e8e8f3;
+
+  /* 残り */
+  --black: #222;
+  --white: #fff;
+  --red-dark: #c84052;
+  --green-dark: #1d926b;
+
+  /* typography */
+  --headingFont: "Inconsolata", monospace;
+  --bodyFont: "Montserrat", sans-serif;
+  --smallText: 0.7em;
+  /* 残り */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-1000);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1280px;
+  --max-height: 960px;
+  --base-padding: 5px;
+  /* box-shadow */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  /* border: 1px black solid; */
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  /* width: var(--max-width); */
+  height: var(--max-height);
+  background: var(--blue-base);
+  color: var(--blue-text);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+.logo{
+  /* padding: 10px; */
+  width: 80px;
+}
+h1 {
+  font-size: 32px;
+  margin: 5px;
+}
+h3 {
+  font-size: 18px;
+  margin: 3px;
+}
+.title {
+  height: auto;
+  width: 600px;
+}
+
+.header_box_right {
+  display: flex;
+  flex-direction: column;
+  width: 680px;
+}
+
+.header_navigation{
+  text-align: center;
+  width: calc(100% - 500px);
+}
+
+.menu_box {
+  text-align: right;
+}
+
+.menu_items{
+  list-style-type: none;
+  font-size: 18px;
+  height: 40px;
+  color: var(--blue-text);
+}
+.menu_item{
+  display: inline-block;
+  /* padding: 50px 25px 50px 25px; */
+  margin: 0;
+  margin: 5px;
+  cursor: pointer;
+}
+.user_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.user_info>label {
+  font-size: 12px;
+  margin: 5px;
+}
+
+.user_name {
+  display: none;
+  margin: 5px;
+}
+.user_name_disp {
+  width: 120px;
+  margin: 5px;
+}
+.user_id {
+  width: 120px;
+  color: gray;
+  margin: 5px;
+}
+.user_group {
+  margin: 5px;
+  width: 180px;
+}
+
+/* #### Right Panel in Body #### */
+.panel_center {
+  height: 860px;
+
+  width: 600px;
+  display: flax;
+  flex-direction: column;
+}
+.control_panel {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+.params_box{
+  display: flex;
+  flex-direction: row;
+  width: 560px;
+  height: 45px;
+  font-size: 18px;
+}
+
+.button_box {
+  height: 80px;
+  width: 80px;
+}
+.data_table {
+  height: 760px;
+}
+
+
+/*#### Left Panel in Boyd ####*/
+.panel_right {
+  width: 600px;
+  height: 860px;
+  display: flex;
+  flex-direction: column;
+}
+.chart_radar {
+  height: 480px;
+}
+.chart_trend {
+  height: 360px;
+}
+.body_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+footer {
+  height: 20px;
+}
+
+.panel_right {
+  width: auto;
+}

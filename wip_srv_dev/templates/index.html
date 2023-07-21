@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+  <title>WIP - White-collar Improvement Program</title>
+</head>
+<body>
+  <div class="appMain">
+
+    <header>
+      <div class="logo">
+  
+      </div>
+      <div class="title">
+        <h1>WIP - Score Board</h1>
+        <h3>評価レコード</h3>
+      </div>
+      <div class="header_box_right">
+        <div class="menu_box">
+            <ol class="menu_items">
+              <li class="menu_item">機能１</li>
+              <li class="menu_item">機能２</li>
+              <li class="menu_item">機能３</li>
+              <li class="menu_item">機能４</li>
+            </ol>
+        </div>
+        <div class="user_info">
+          <label for="user_name">ユーザー名：</label>  
+          <input type="text" name="user_name" id="user_name" class="user_name">
+          <span class="user_name_disp">黒澤 正明</span>
+          <div class="user_id">1234577584930</div>
+          <label>グループ：</label>  
+          <div class="user_group">エクティシステム開発部</div>  
+        </div>
+  
+      </div>
+  
+    </header>
+    <div class="body_wrapper">
+      <div class="panel_left">
+        
+        <div class="control_panel">
+          
+          <div class="params_box">
+            <label for="data_interval">表示期間</label>
+            <select name="data_interval" id="data_interval" size=1>
+              <option value="12M">12ヶ月</option>
+              <option value="6M">6ヶ月</option>
+              <option value="3M">3ヶ月</option>
+              <option value="1M">1ヶ月</option>
+              <option value="1W" selected>1週間</option>
+            </select>
+            <fieldset>
+              <legend>スコア表示方法</legend>
+              <label for="calc_seg">分離</label>
+              <input type="radio" name="calc_method" id="calc_seg" value="seg" checked>
+              <label for="calc_mix">合成</label>
+              <input type="radio" name="calc_method" id="calc_mix">
+            </fieldset>
+  
+            <label for="base_date">基準日</label>
+            <input type="date" name="base_date" id="base_date">
+  
+  
+          </div>
+          <div class="button_box">
+  
+          </div>
+  
+  
+        </div>
+        <div class="data_table">
+          data_table
+  
+        </div>  
+      </div>
+      <div class="panel_center">
+        panel_center
+        <div class="chart_radar">
+          chart_radar
+  
+        </div>
+        <div class="chart_trend">
+          chart_trend
+  
+        </div>
+      </div>
+      <div class="panel_left">
+        panel_right
+      </div>
+    </div>
+  
+  
+    <footer>
+      footer
+  
+    </footer>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,11 @@
+pymongo
+python-dotenv
+flask
+bson
+openai
+beautifulsoup4
+lxml
+mysql-connector-python
+janome
+mecab-python3
+unidic-lite
